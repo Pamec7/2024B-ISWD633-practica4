@@ -93,9 +93,8 @@ PS C:\Users\johan\Downloads> docker run -d -P --name contenedorMyapp myapp:1.0
 # COMPLETAR CON LA RESPUESTA
 <pre>
 El mapeo se realiza con el puerto 32768 del host y  el puerto 80 del contenedor.
- ![image](https://github.com/user-attachments/assets/bc3b7c6f-b4f4-401e-bfc4-dd0f2121d91c)
-
 </pre>
+![image](https://github.com/user-attachments/assets/bc3b7c6f-b4f4-401e-bfc4-dd0f2121d91c)
 **¿Qué es una imagen huérfana?**
 # COMPLETAR CON LA RESPUESTA
 <pre>
