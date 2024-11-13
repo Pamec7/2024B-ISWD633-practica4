@@ -77,13 +77,21 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 ```
 
 ```
+<pre>
 
+
+ 
+</pre>
 ### ¿Con que puerto host se está realizando el mapeo?
 # COMPLETAR CON LA RESPUESTA
-
+<pre>
+El mapeo se realiza con el puerto 32768 del host y  el puerto 80 del contenedor.
+</pre>
 **¿Qué es una imagen huérfana?**
 # COMPLETAR CON LA RESPUESTA
-
+<pre>
+Una imagen huérfana es una imagen que no tiene etiqueta y no está asociada a ninguna imagen activa o contenedor en ejecución.
+</pre>
 ### Identificar imágenes huérfanas
 ```
 docker images -f "dangling=true"
