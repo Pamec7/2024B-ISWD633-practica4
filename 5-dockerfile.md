@@ -53,18 +53,27 @@ docker build -t <nombre imagen>:<tag> .
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
 No olvides verificar en qué directorio se encuentra el archivo Dockerfile
 ```
-
+docker build -t myapp:1.0 -f "C:\Users\johan\Downloads\Dockerfile.txt" .
 ```
 
 **¿Cuántos pasos se han ejecutado?**
 # RESPONDER 
+<pre>
+ Se ejecutaron 3 pasos.
+</pre>
 
 ### Inspeccionar la imagen creada
 # COMPLETAR CON UNA CAPTURA
+![image](https://github.com/user-attachments/assets/bc221d48-2e1a-4e99-97e2-bec1c896391b)
+
 
 **Modificar el archivo index.html para incluir su nombre y luego crear una nueva versión de la imagen anterior**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
+<pre>
+Se ejecutan 3 pasos de igual manera.
+Docker reutilizará las capas en caché para los pasos que se mantenieron iguales, y se agrega en COPY el ./index.html. De esta manera se reconstruirá la imagen afectando el tamaño de la nueva imagen
 
+</pre>
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
 
@@ -74,18 +83,18 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 ![mapeo](img/dockerfile-cache.PNG)
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
-```
 
-```
 <pre>
+PS C:\Users\johan\Downloads> docker run -d -P --name contenedorMyapp myapp:1.0
+52eee3505e11e58cf8be9d551fea6952e708ba2bf3455be8dd586f0b7038ea26
 
-
- 
 </pre>
 ### ¿Con que puerto host se está realizando el mapeo?
 # COMPLETAR CON LA RESPUESTA
 <pre>
 El mapeo se realiza con el puerto 32768 del host y  el puerto 80 del contenedor.
+ ![image](https://github.com/user-attachments/assets/bc3b7c6f-b4f4-401e-bfc4-dd0f2121d91c)
+
 </pre>
 **¿Qué es una imagen huérfana?**
 # COMPLETAR CON LA RESPUESTA
